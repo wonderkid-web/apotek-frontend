@@ -1,12 +1,13 @@
-import { useState } from "react";
-import "./App.css";
+import Dashboard from "./Pages/Dashboard";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 
 function App() {
-    const [count, setCount] = useState(0);
-
     return (
         <>
-            <h1>ini rafi</h1>
+            <Navbar></Navbar>
+            <Dashboard></Dashboard>
+            <Sidebar></Sidebar>
         </>
     );
 }
