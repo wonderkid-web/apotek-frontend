@@ -2,48 +2,41 @@
 import { useEffect, useState } from 'react';
 import Table from '../../components/Items/Table';
 
-const DataKategori = () => {
+const Masuk = () => {
   const [data, setData] = useState<Array>([])
 
   useEffect(()=>{
       const getData = async () =>{
-        const raw = await fetch('http://localhost:3000/obat')
+        const raw = await fetch('http://localhost:3000/purchases')
         const {data} = await raw.json()
         setData(data)
       }
       getData()
   }, [])
 
-const columns = [
-  {
-    header: "ID",
-    accessorKey: "",
-  },
-  {
-    header: "Nama Obat",
-    accessorKey: "nama",
-  },
-  {
-    header: "Jenis Obat",
-    accessorKey: "jenis",
-  },
-  {
-    header: "Satuan Obat",
-    accessorKey: "satuan",
-  },
-  {
-    header: "Stok",
-    accessorKey: "stock",
-  },
-  {
-    header: "Waktu Dibuat",
-    accessorKey: "created_at",
-  },
-  {
-    header: "Opsi",
-    accessorKey: ""
-  }
-];
+  const columns = [
+    {
+      header: "ID",
+      accessorKey: "",
+    },
+    {
+      header: "Obat ID",
+      accessorKey: "obatId",
+    },
+    {
+      header: "Jumlah",
+      accessorKey: "jumlah",
+    },
+    {
+      header: "Waktu Dibuat",
+      accessorKey: "created_at",
+    },
+    {
+      header: "Nama Obat",
+      accessorKey: "obat.nama",
+    },
+  ];
+  
 
 // const columns  = [
 //   {
@@ -70,10 +63,10 @@ const columns = [
 
   return (
     <div>
-      <h1 className='text-center text-xl my-4 w-fit bg-primary text-white p-2 rounded-md'>Table Obat</h1>
+      <h1 className='text-center text-xl my-4 w-fit bg-primary text-white p-2 rounded-md'>Table Transaksi Masuk</h1>
       {data && <Table datas={data} columns={columns} />}
     </div>
   )
 }
 
-export default DataKategori
+export default Masuk

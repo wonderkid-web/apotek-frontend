@@ -24,7 +24,7 @@ const Table = ({ datas, filtered }) => {
                         <th>Opsi</th>
                     </tr>
                 </thead>
-                <tbody align="center">
+                <tbody>
                     {datas
                         ?.filter((data) =>
                             data.jenis.toLowerCase() === ""
@@ -61,7 +61,7 @@ const CardItem = ({ cardTitle, datas }) => {
             <div className="card-body max-h-[80vh]">
                 <h2 className="card-title flex justify-center">{cardTitle}</h2>
                 <div className="border rounded-md p-3 mb-2">
-                    <h5 className="font-semibold my-3">Tambah Obat</h5>
+                    <label className="font-semibold my-3">Tambah Obat</label>
                     <select className="select select-info select-sm w-full max-w-xs mb-5">
                         <option disabled selected>
                             Jenis Obat{" "}

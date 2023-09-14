@@ -6,6 +6,8 @@ import Dashboard from "./Pages/Dashboard.tsx";
 import RootLayout from "./Pages/RootLayout.tsx";
 import DataObat from "./Pages/MasterData/DataObat.tsx";
 import DataKategori from "./Pages/MasterData/DataKategori.tsx";
+import Masuk from "./Pages/Transaksi/Masuk.tsx";
+import Keluar from "./Pages/Transaksi/Keluar.tsx";
 
 const router = createBrowserRouter([
     {
@@ -26,11 +28,11 @@ const router = createBrowserRouter([
             },
             {
                 path: "/transaksi-masuk",
-                element: <DataObat />,
+                element: <Masuk />,
             },
             {
                 path: "/transaksi-keluar",
-                element: <DataObat />,
+                element: <Keluar />,
             },
             {
                 path: "/laporan",
