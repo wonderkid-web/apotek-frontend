@@ -7,7 +7,7 @@ const Sidebar = () => {
     const iconSize = "h-5 w-6 mr-1";
 
     return (
-        <div className="drawer lg:drawer-open">
+        <div className="drawer lg:drawer-open z-10">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
 
             <div className="drawer-side ">

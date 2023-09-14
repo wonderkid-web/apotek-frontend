@@ -6,7 +6,7 @@ const Dashboard = () => {
     const iconSize = "text-4xl";
 
     return (
-        <div className="stats shadow absolute top-12">
+        <div className="stats shadow absolute top-12 -z-10">
             <div className="stat">
                 <div className="stat-figure text-secondary">
                     <GiHealthDecrease className={iconSize} />

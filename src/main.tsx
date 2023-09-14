@@ -4,7 +4,8 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from "./Pages/Dashboard.tsx";
 import RootLayout from "./Pages/RootLayout.tsx";
-import DataObat from "./Pages/DataObat.tsx";
+import DataObat from "./Pages/MasterData/DataObat.tsx";
+import DataKategori from "./Pages/MasterData/DataKategori.tsx";
 
 const router = createBrowserRouter([
     {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/data-kategori",
-                element: <DataObat />,
+                element: <DataKategori />,
             },
             {
                 path: "/transaksi-masuk",
