@@ -45,6 +45,8 @@ const columns = [
   }
 ];
 
+const header = ["ID", "Nama Obat", "Jenis Obat", "Satuan Obat", "Stok", "Waktu Dibuat"]
+
 // const columns  = [
 //   {
 //     header: "Nama Obat",
@@ -71,7 +73,7 @@ const columns = [
   return (
     <div>
       <h1 className='text-center text-xl my-4 w-fit bg-primary text-white p-2 rounded-md'>Table Obat</h1>
-      {data && <Table datas={data} columns={columns} />}
+      {data && <Table datas={data} columns={columns} header={header} />}
     </div>
   )
 }

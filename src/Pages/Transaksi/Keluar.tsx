@@ -36,6 +36,8 @@ const Keluar = () => {
       accessorKey: "obat.nama",
     },
   ];
+
+  const header = ["ID", "Obat ID", "Jumlah", "Waktu Dibuat", "Nama Obat"]
   
 
 // const columns  = [
@@ -64,7 +66,7 @@ const Keluar = () => {
   return (
     <div>
       <h1 className='text-center text-xl my-4 w-fit bg-primary text-white p-2 rounded-md'>Table Transaksi Keluar</h1>
-      {data && <Table datas={data} columns={columns} />}
+      {data && <Table datas={data} columns={columns} header={header} />}
     </div>
   )
 }

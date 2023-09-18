@@ -1,9 +1,10 @@
 import { flexRender, getCoreRowModel, getFilteredRowModel, getPaginationRowModel, getSortedRowModel, useReactTable } from "@tanstack/react-table"
 import { useMemo, useState } from "react"
+import { downloadExcel } from "react-export-table-to-excel"
 // import fakeData from "../assets/MOCK_DATA.json"
 
 
-const Table = ({ columns, datas }: any) => {
+const Table = ({ columns, datas, header }: any) => {
 
   const [sorting, setSorting] = useState([])
   const [filtering, setFiltering] = useState('')
@@ -11,6 +12,21 @@ const Table = ({ columns, datas }: any) => {
   const [error, setError] = useState(false)
 
   const data = useMemo(() => datas, [datas])
+
+
+  const handleExport = () =>{
+   
+    downloadExcel({
+      fileName: "react-export-table-to-excel -> downloadExcel method",
+      sheet: "react-export-table-to-excel",
+      tablePayload: {
+        header,
+        // accept two different data structures
+        body: data,
+      },
+    });
+  }
+
 
 
   const table = useReactTable({
@@ -101,6 +117,7 @@ const Table = ({ columns, datas }: any) => {
           }
         </tbody>
       </table>
+      <button onClick={handleExport}>Export Data to Excel</button>
       <div className="btn-group mt-2 w-full flex justify-center">
         <button className="btn btn-active" onClick={() => table.setPageIndex(0)}>first page</button>
         <button disabled={!table.getCanPreviousPage()} className="btn" onClick={() => table.previousPage()}>previous page</button>
