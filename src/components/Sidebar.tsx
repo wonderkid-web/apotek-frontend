@@ -10,9 +10,9 @@ const Sidebar = () => {
         <div className="drawer lg:drawer-open z-10">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
 
-            <div className="drawer-side ">
+            <div className="drawer-side">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                <ul className="menu w-60 min-h-full bg-base-200 text-base-content py-12">
+                <ul className="menu w-60 min-h-full bg-base-200 text-sky-800 py-12">
                     <ul className="menu bg-base-200 w-56 rounded-box">
                         <li>
                             <summary>
@@ -30,12 +30,15 @@ const Sidebar = () => {
                                 </summary>
                                 <ul className="ml-10">
                                     <li>
-                                        <Link to="/data-kategori">
-                                            Data Kategori
+                                        <Link to="/data-obat">Data Obat</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/tambah-obat">
+                                            Tambah Obat
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="/data-obat">Data Obat</Link>
+                                        <Link to="/stock-obat">Stock Obat</Link>
                                     </li>
                                 </ul>
                             </details>

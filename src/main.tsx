@@ -4,10 +4,11 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from "./Pages/Dashboard.tsx";
 import RootLayout from "./Pages/RootLayout.tsx";
+import TambahObat from "./Pages/MasterData/TambahObat.tsx";
 import DataObat from "./Pages/MasterData/DataObat.tsx";
-import DataKategori from "./Pages/MasterData/DataKategori.tsx";
 import Masuk from "./Pages/Transaksi/Masuk.tsx";
 import Keluar from "./Pages/Transaksi/Keluar.tsx";
+import StockObat from "./Pages/MasterData/StockObat.tsx";
 
 const router = createBrowserRouter([
     {
@@ -23,8 +24,12 @@ const router = createBrowserRouter([
                 element: <DataObat />,
             },
             {
-                path: "/data-kategori",
-                element: <DataKategori />,
+                path: "/tambah-obat",
+                element: <TambahObat />,
+            },
+            {
+                path: "/stock-obat",
+                element: <StockObat />,
             },
             {
                 path: "/transaksi-masuk",
