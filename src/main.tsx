@@ -6,9 +6,11 @@ import Dashboard from "./Pages/Dashboard.tsx";
 import RootLayout from "./Pages/RootLayout.tsx";
 import TambahObat from "./Pages/MasterData/TambahObat.tsx";
 import DataObat from "./Pages/MasterData/DataObat.tsx";
+import TableTransaksiMasuk from "./Pages/Transaksi/TableTransaksiMasuk.tsx";
+import TableTransaksiKeluar from "./Pages/Transaksi/TableTransaksiKeluar.tsx";
+import StockObat from "./Pages/MasterData/StockObat.tsx";
 import Masuk from "./Pages/Transaksi/Masuk.tsx";
 import Keluar from "./Pages/Transaksi/Keluar.tsx";
-import StockObat from "./Pages/MasterData/StockObat.tsx";
 
 const router = createBrowserRouter([
     {
@@ -32,12 +34,20 @@ const router = createBrowserRouter([
                 element: <StockObat />,
             },
             {
-                path: "/transaksi-masuk",
+                path: "/tambah-transaksi-masuk",
                 element: <Masuk />,
             },
             {
-                path: "/transaksi-keluar",
+                path: "/tambah-transaksi-keluar",
                 element: <Keluar />,
+            },
+            {
+                path: "/table-transaksi-masuk",
+                element: <TableTransaksiMasuk />,
+            },
+            {
+                path: "/table-transaksi-keluar",
+                element: <TableTransaksiKeluar />,
             },
             {
                 path: "/laporan",
