@@ -1,6 +1,10 @@
-const Button = ({ variant, text }) => {
+const Button = ({ variant, text, onClick, disabled }) => {
     return (
-        <button className={`btn btn-sm ${variant} hover:brightness-75`}>
+        <button
+            className={`btn btn-sm ${variant} hover:brightness-75`}
+            onClick={onClick}
+            disabled={disabled}
+        >
             {text}
         </button>
     );

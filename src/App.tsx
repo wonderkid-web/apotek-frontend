@@ -1,4 +1,4 @@
-import Dashboard from "./Pages/Dashboard";
+import Dashboard from "./pages/dashboard";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 

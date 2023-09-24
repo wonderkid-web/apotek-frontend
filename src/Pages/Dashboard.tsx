@@ -4,12 +4,13 @@ import { RiHealthBookFill } from "react-icons/ri";
 
 const Dashboard = () => {
     const iconSize = "text-4xl";
+    const color = { color: "#38bdf8" };
 
     return (
         <div className="stats shadow absolute top-12 -z-10">
             <div className="stat">
                 <div className="stat-figure text-secondary">
-                    <GiHealthDecrease className={iconSize} />
+                    <GiHealthDecrease className={iconSize} style={color} />
                 </div>
                 <div className="stat-title">Total Obat Masuk</div>
                 <div className="stat-value">31K</div>
@@ -18,7 +19,7 @@ const Dashboard = () => {
 
             <div className="stat">
                 <div className="stat-figure text-secondary">
-                    <GiHealthIncrease className={iconSize} />
+                    <GiHealthIncrease className={iconSize} style={color} />
                 </div>
 
                 <div className="stat-title">Total Obat Keluar</div>
@@ -27,7 +28,7 @@ const Dashboard = () => {
             </div>
             <div className="stat">
                 <div className="stat-figure text-secondary">
-                    <RiHealthBookFill className={iconSize} />
+                    <RiHealthBookFill className={iconSize} style={color} />
                 </div>
                 <div className="stat-title">Stok Persediaan Obat</div>
                 <div className="stat-value">1,200</div>

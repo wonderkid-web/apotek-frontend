@@ -24,15 +24,15 @@ const Navbar = () => {
                         </svg>
                     </label>
                 </div>
-                <a className="btn btn-ghost normal-case text-2xl ml-2">
+                <a className="btn btn-ghost normal-case text-2xl ml-2 text-sky-800">
                     Jayapan
                 </a>
             </div>
 
             <div className="navbar-end mr-8 ">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                    <div className="w-10 rounded-full ">
-                        <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    <div className="w-20 rounded-full ">
+                        <img src="../../public/img/profile.jpg" />
                     </div>
                 </label>{" "}
             </div>
